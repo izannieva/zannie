@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - PI</title>
+</head>
+<body>
+    <header>
+        <h1><a href="index.html">PI - Pictures & Images</a></h1>
+        <nav>
+            <ul>
+                <li><a href="busqueda.html">Buscar fotos</a></li>
+                <li><a href="login.html">Iniciar Sesión</a></li>
+                <li><a href="registro.html">Registro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <form action="index_registrado.html" method="post">
+        <label for="username">Usuario:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="confirm_password">Repetir contraseña:</label>
+        <input type="password" id="confirm_password" name="confirm_password" required>
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="birthdate">Fecha de nacimiento:</label>
+        <input type="date" id="birthdate" name="birthdate" required>
+
+        <button type="submit">Registrarse</button>
+    </form>
+
+    <footer>
+        <p>&copy; 2024 PI - Pictures & Images</p>
+    </footer>
+</body>
+</html>
+
