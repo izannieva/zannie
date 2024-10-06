@@ -7,13 +7,12 @@
 </head>
 <body>
     <header>
-        <h1><a href="index.html">PI - Pictures & Images</a></h1>
+        <h1><a href="index_registrado.html">PI - Pictures & Images</a></h1>
         <nav>
             <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="busqueda.html">Buscar fotos</a></li>
-                <li><a href="registro.html">Registro</a></li>
-                <li><a href="login.html">Iniciar Sesión</a></li>
+                <li><a href="index_registrado.html">Inicio</a></li>
+                <li><a href="busqueda_registrado.html">Buscar fotos</a></li>
+                <li><a href="mi_perfil.html">Mi Perfil</a></li>
             </ul>
         </nav>
     </header>
@@ -21,52 +20,52 @@
     <h2>Solicitar Álbum Impreso</h2>
 
     <form action="confirmacion_album.html" method="post">
-        <!-- Nombre del destinatario -->
+        
         <label for="nombre">Nombre completo:</label>
         <input type="text" id="nombre" name="nombre" maxlength="200" required>
         <br>
 
-        <!-- Título del álbum -->
+        
         <label for="titulo">Título del álbum:</label>
         <input type="text" id="titulo" name="titulo" maxlength="200" required>
         <br>
 
-        <!-- Texto adicional (dedicatoria) -->
+     
         <label for="texto">Texto adicional (dedicatoria):</label>
         <textarea id="texto" name="texto" maxlength="4000"></textarea>
         <br>
 
-        <!-- Correo electrónico -->
+        
         <label for="email">Correo electrónico:</label>
         <input type="email" id="email" name="email" required>
         <br>
 
-        <!-- Dirección de envío -->
+      
         <label for="direccion">Dirección de envío:</label>
         <input type="text" id="direccion" name="direccion" required>
         <br>
 
-        <!-- Teléfono -->
+        
         <label for="telefono">Teléfono (opcional):</label>
         <input type="tel" id="telefono" name="telefono">
         <br>
 
-        <!-- Color de la portada -->
+       
         <label for="color">Color de la portada:</label>
         <input type="color" id="color" name="color" value="#000000">
         <br>
 
-        <!-- Número de copias -->
+        
         <label for="copias">Número de copias:</label>
         <input type="number" id="copias" name="copias" min="1" max="99" value="1" required>
         <br>
 
-        <!-- Resolución de las fotos -->
+        
         <label for="resolucion">Resolución de las fotos (DPI):</label>
         <input type="range" id="resolucion" name="resolucion" min="150" max="900" step="150" value="150">
         <br>
 
-        <!-- Álbum de fotos del usuario -->
+       
         <label for="album">Álbum seleccionado:</label>
         <select id="album" name="album" required>
             <option value="verano2024">Verano 2024</option>
@@ -75,18 +74,21 @@
         </select>
         <br>
 
-        <!-- Fecha de recepción -->
+        
         <label for="fecha">Fecha de recepción (opcional):</label>
         <input type="date" id="fecha" name="fecha">
         <br>
 
-        <!-- Impresión a color o blanco y negro -->
+        
         <label for="impresion">Impresión:</label>
         <select id="impresion" name="impresion">
             <option value="color">Color</option>
             <option value="blanco_negro">Blanco y negro</option>
         </select>
         <br>
+
+        <!-- Precio estándar añadido aquí -->
+        <p><strong>Precio estándar del álbum: 50,00 €</strong></p>
 
         <button type="submit">Solicitar Álbum</button>
     </form>
