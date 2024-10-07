@@ -19,6 +19,49 @@
 
     <h2>Solicitar Álbum Impreso</h2>
 
+    <h3>TABLA DE PRECIOS</h3>
+
+    <table>
+        <tr>
+            <th>Concepto</th>
+            <th>Tarifa</th>
+        </tr>
+        <tr>
+            <td>Coste procesamiento y envío</td>
+            <td>10 €</td>
+        </tr>
+        <tr>
+            <td>&lt; 5 páginas</td>
+            <td>2 € por pág.</td>
+        </tr>
+        <tr>
+            <td>entre 5 y 10 páginas</td>
+            <td>1.8 € por pág.</td>
+        </tr>
+        <tr>
+            <td>&gt; 10 páginas</td>
+            <td>1.6 € por pág.</td>
+        </tr>
+        <tr>
+            <td>Blanco y negro</td>
+            <td>0 €</td>
+        </tr>
+        <tr>
+            <td>Color</td>
+            <td>0.5 € por foto</td>
+        </tr>
+        <tr>
+            <td>Resolución &le; 300 dpi</td>
+            <td>0 € por foto</td>
+        </tr>
+        <tr>
+            <td>Resolución &gt; 300 dpi</td>
+            <td>0.2 € por foto</td>
+        </tr>
+    </table>
+
+    <h3>FORMULARIO</h3>
+
     <form action="confirmacion_album.html" method="post">
         
         <label for="nombre">Nombre completo:</label>
@@ -41,8 +84,40 @@
         <br>
 
       
-        <label for="direccion">Dirección de envío:</label>
-        <input type="text" id="direccion" name="direccion" required>
+        <fieldset>
+            <legend>Dirección de envío</legend>
+
+            <label for="calle">Calle:</label>
+            <input type="text" id="calle" name="calle" required>
+            <br>
+
+            <label for="numero">Número:</label>
+            <input type="text" id="numero" name="numero" required>
+            <br>
+
+            <label for="piso">Piso:</label>
+            <input type="text" id="piso" name="piso">
+            <br>
+
+            <label for="puerta">Puerta:</label>
+            <input type="text" id="puerta" name="puerta">
+            <br>
+
+            <label for="codigo_postal">Código postal:</label>
+            <input type="text" id="codigo_postal" name="codigo_postal" required>
+            <br>
+
+            <label for="localidad">Localidad:</label>
+            <input type="text" id="localidad" name="localidad" required>
+            <br>
+
+            <label for="provincia">Provincia:</label>
+            <input type="text" id="provincia" name="provincia" required>
+            <br>
+
+            <label for="pais">País:</label>
+            <input type="text" id="pais" name="pais" required>
+        </fieldset>
         <br>
 
         
