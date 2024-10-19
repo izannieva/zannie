@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Búsqueda - PI</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1><a href="index_registrado.html">PI - Pictures & Images</a></h1>
+        <nav>
+            <ul>
+                <li><a href="busqueda.html">Buscar fotos</a></li>
+                <li><a href="login.html">Iniciar Sesión</a></li>
+                <li><a href="registro.html">Registro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <form action="resultados.html" method="get">
+        <label for="title">Título:</label>
+        <input type="text" id="title" name="title">
+
+        <label for="date">Fecha:</label>
+        <input type="date" id="date" name="date">
+
+        <label for="country">País:</label>
+        <input type="text" id="country" name="country">
+
+        <button type="submit">Buscar</button>
+    </form>
+
+    <footer>
+        <p>&copy; 2024 PI - Pictures & Images</p>
+    </footer>
+</body>
+</html>
