@@ -15,7 +15,7 @@
                 <li><a href="index_registrado.html">Inicio</a></li>
                 <li><a href="busqueda_registrado.html">Buscar fotos</a></li>
                 <li><a href="mi_perfil.html">Mi Perfil</a></li>
-                <li><a href="solicitar_album.html">Solicitar album</a></li>
+                <li><a href="solicitar_album.html">Solicitar álbum</a></li>
                 <li><a href="index.html">Cerrar Sesión</a></li>
             </ul>
         </nav>
@@ -67,106 +67,74 @@
     <h3>FORMULARIO</h3>
 
     <form action="confirmacion_album.html" method="get">
-        
         <label for="nombre">Nombre completo:</label>
         <input type="text" id="nombre" name="nombre" maxlength="200" required>
-        <br>
 
-        
         <label for="titulo">Título del álbum:</label>
         <input type="text" id="titulo" name="titulo" maxlength="200" required>
-        <br>
 
-     
         <label for="texto">Texto adicional (dedicatoria):</label>
         <textarea id="texto" name="texto" maxlength="4000"></textarea>
-        <br>
 
-        
         <label for="email">Correo electrónico:</label>
         <input type="email" id="email" name="email" required>
-        <br>
 
-      
         <fieldset>
             <legend>Dirección de envío</legend>
 
             <label for="calle">Calle:</label>
             <input type="text" id="calle" name="calle" required>
-            <br>
 
             <label for="numero">Número:</label>
             <input type="number" id="numero" name="numero" required>
-            <br>
 
             <label for="piso">Piso:</label>
             <input type="text" id="piso" name="piso">
-            <br>
 
             <label for="puerta">Puerta:</label>
             <input type="text" id="puerta" name="puerta">
-            <br>
 
             <label for="codigo_postal">Código postal:</label>
             <input type="number" id="codigo_postal" name="codigo_postal" required>
-            <br>
 
             <label for="localidad">Localidad:</label>
             <input type="text" id="localidad" name="localidad" required>
-            <br>
 
             <label for="provincia">Provincia:</label>
             <input type="text" id="provincia" name="provincia" required>
-            <br>
 
             <label for="pais">País:</label>
             <input type="text" id="pais" name="pais" required>
         </fieldset>
-        <br>
 
-        
         <label for="telefono">Teléfono (opcional):</label>
         <input type="tel" id="telefono" name="telefono">
-        <br>
 
-       
         <label for="color">Color de la portada:</label>
         <input type="color" id="color" name="color" value="#000000">
-        <br>
 
-        
         <label for="copias">Número de copias:</label>
         <input type="number" id="copias" name="copias" min="1" max="99" value="1" required>
-        <br>
 
-        
         <label for="resolucion">Resolución de las fotos (DPI):</label>
         <input type="range" id="resolucion" name="resolucion" min="150" max="900" step="150" value="150">
-        <br>
 
-       
         <label for="album">Álbum seleccionado:</label>
         <select id="album" name="album" required>
             <option value="verano2024">Verano 2024</option>
             <option value="cumpleaños2023">Cumpleaños 2023</option>
             <option value="navidad2023">Navidad 2023</option>
         </select>
-        <br>
 
-        
         <label for="fecha">Fecha de recepción (opcional):</label>
         <input type="date" id="fecha" name="fecha">
-        <br>
 
-        
         <label for="impresion">Impresión:</label>
         <select id="impresion" name="impresion">
             <option value="color">Color</option>
             <option value="blanco_negro">Blanco y negro</option>
         </select>
-        <br>
 
-        <!-- Precio estándar añadido aquí -->
         <p><strong>Precio estándar del álbum: 50,00 €</strong></p>
 
         <button type="submit">Solicitar Álbum</button>
