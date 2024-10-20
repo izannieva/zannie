@@ -76,10 +76,10 @@ form textarea {
     border-radius: 5px;
 }
 
-/* Tamaño más grande para el textarea de texto adicional */
+
 #texto {
-    height: 150px; /* Ajusta este valor según lo que desees */
-    width: 100%; /* Asegura que ocupe todo el ancho disponible */
+    height: 150px;
+    width: 100%; 
     padding: 10px;
     box-sizing: border-box;
 }
