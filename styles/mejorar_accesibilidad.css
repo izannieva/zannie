@@ -113,7 +113,7 @@ body.colorblind-safe a:focus, body.colorblind-safe a:hover {
 }
 
 body.large-text {
-    font-size: 20px; /* Aumenta el tamaño de la fuente para una mejor legibilidad */
+    font-size: 20px;
 }
 
 .important-info {
@@ -122,32 +122,32 @@ body.large-text {
     padding-left: 10px;
 }
 
-/* Nuevas mejoras sugeridas */
+
 body {
-    background-color: #fff; /* Modo claro por defecto */
+    background-color: #fff; 
 }
 
 body.high-contrast {
-    background-color: #000; /* Modo alto contraste */
-    color: #fff; /* Texto blanco en modo alto contraste */
+    background-color: #000; 
+    color: #fff; 
 }
 
-/* Alternativas de colores */
+
 body.alternative-colors {
-    background-color: #fafafa; /* Color de fondo alternativo */
-    color: #2e2e2e; /* Color de texto alternativo */
+    background-color: #fafafa; 
+    color: #2e2e2e;
 }
 
-/* Estilo de fuente personalizable */
+
 body.large-text {
-    font-size: 20px; /* Aumentar tamaño de texto */
+    font-size: 20px; 
 }
 
-/* Atajos de teclado y navegación mejorada */
+
 nav a {
-    outline: 2px solid transparent; /* Resaltar enlaces en el enfoque */
+    outline: 2px solid transparent; 
 }
 
 nav a:focus {
-    outline: 2px solid #1a73e8; /* Resaltar enlace en enfoque */
+    outline: 2px solid #1a73e8; 
 }
