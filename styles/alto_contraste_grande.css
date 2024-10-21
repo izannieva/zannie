@@ -1,0 +1,9 @@
+@import url(estilos_alto_contraste.css);
+
+html{
+    font-size: 2rem;
+}
+
+main{
+    padding: 1rem;
+}
