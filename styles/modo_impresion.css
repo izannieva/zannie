@@ -1,74 +1,70 @@
-
 @media print {
-   
     body {
-      background-color: white;
-      color: black;
-      font-size: 12pt;
-      font-family: serif; 
+        background-color: white;
+        color: black;
+        font-size: 12pt;
+        font-family: serif;
+        line-height: 1.5; 
     }
-  
 
     nav, footer, .sidebar, .dynamic-content, form {
+        display: none; 
+    }
+
+    a:link, a:visited {
+        text-decoration: underline;
+        color: black; 
+    }
+
+    a:after {
+        content: " (" attr(href) ") "; 
+        font-size: 10pt;
+        color: gray;
+    }
+  
+    
+    img {
       display: none;
     }
   
-  
-    a:link, a:visited {
-      text-decoration: underline;
-      color: black; 
-    }
-    
-    a:after {
-      content: " (" attr(href) ") ";
-      font-size: 10pt;
-      color: gray;
-    }
-  
-  
    
     img.important {
-      display: block;
+        display: block; 
     }
-  
-   
+
     table, tr, td, th {
-      page-break-inside: avoid;
+        page-break-inside: avoid; 
     }
-  
 
     h1, h2, h3 {
-      page-break-before: avoid;
-      page-break-after: avoid;
+        page-break-before: avoid; 
+        page-break-after: avoid; 
     }
-  
-  
+
     p, blockquote, ul, ol, dl {
-      widows: 2;
-      orphans: 2;
+        widows: 2; 
+        orphans: 2; 
+        margin-bottom: 15px; 
     }
-  
-    
+
     @page {
-      size: A4;
-      margin: 2cm;
+        size: A4; 
+        margin: 2cm; 
     }
-  
+
     footer::after {
-      content: "URL: " attr(data-url) " | Derechos de uso © 2024";
-      font-size: 10pt;
-      display: block;
-      margin-top: 20px;
-      text-align: center;
+        content: "URL: " attr(data-url) " | Derechos de uso © 2024"; 
+        font-size: 10pt;
+        display: block;
+        margin-top: 20px;
+        text-align: center;
     }
 
     time::before {
-      content: attr(datetime);
+        content: attr(datetime);
     }
-  
-    
+
     article, section {
-      margin-bottom: 20px;
+        margin-bottom: 20px; 
     }
-  }
-  
+}
