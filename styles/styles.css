@@ -76,7 +76,6 @@ form textarea {
     border-radius: 5px;
 }
 
-
 #texto {
     height: 150px;
     width: 100%; 
@@ -259,4 +258,33 @@ footer {
     padding: 20px 0;
     text-align: center;
     margin-top: 20px;
+}
+
+/* Estilos para el contenedor de dos columnas */
+.contenedor-columnas {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Espacio entre las columnas */
+    margin: 20px auto;
+    max-width: 1200px; /* Ancho máximo para el contenedor */
+}
+
+/* Estilos generales para cada columna */
+.columna {
+    flex: 1; /* Cada columna ocupará el mismo espacio */
+    background-color: #fff; /* Fondo blanco para ambas columnas */
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+    .contenedor-columnas {
+        flex-direction: column; /* Las columnas se apilan una sobre otra */
+    }
+
+    .columna {
+        margin-bottom: 20px; /* Espacio entre las columnas cuando se apilan */
+    }
 }
