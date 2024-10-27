@@ -67,11 +67,11 @@
                     <span class="error-message" id="calleError"></span>
 
                     <label for="numero">Número:</label>
-                    <input type="text" id="numero" name="numero">
+                    <input type="number" id="numero" name="numero" min="0">
                     <span class="error-message" id="numeroError"></span>
 
                     <label for="codigo_postal">Código postal:</label>
-                    <input type="text" id="codigo_postal" name="codigo_postal">
+                    <input type="number" id="codigo_postal" name="codigo_postal" min="0">
                     <span class="error-message" id="codigo_postalError"></span>
 
                     <label for="localidad">Localidad:</label>
@@ -88,11 +88,11 @@
                 </fieldset>
 
                 <label for="copias">Número de copias:</label>
-                <input type="text" id="copias" name="copias">
+                <input type="number" id="copias" name="copias" min="1">
                 <span class="error-message" id="copiasError"></span>
 
                 <label for="resolucion">Resolución de las fotos (DPI):</label>
-                <input type="text" id="resolucion" name="resolucion">
+                <input type="number" id="resolucion" name="resolucion" min="1">
                 <span class="error-message" id="resolucionError"></span>
 
                 <label for="album">Álbum seleccionado:</label>
@@ -120,8 +120,8 @@
         <p>&copy; 2024 PI - Pictures & Images</p>
     </footer>
 
-    <!-- Enlace al archivo JavaScript para la validación y generación de la tabla de costos -->
-    <script src="validacionAlbum.js"></script>
+    
+    <script src="validacion.js"></script>
     <script src="tablacostos.js"></script>
 </body>
 </html>

@@ -1,14 +1,14 @@
-// tablaCostos.js
+
 document.addEventListener("DOMContentLoaded", function () {
     const tarifas = {
         paginas: [1, 5, 10, 15],
         fotos: [3, 5, 7],
-        color: [1.0, 1.2], // Blanco y negro (1.0), color (1.2)
-        resolucion: [1.0, 1.5] // Baja (1.0), Alta (1.5)
+        color: [1.0, 1.2], 
+        resolucion: [1.0, 1.5] 
     };
 
     function calcularCoste(paginas, fotos, colorFactor, resolucionFactor) {
-        const basePrice = 2; // Precio base por página
+        const basePrice = 2; 
         return (basePrice * paginas * fotos * colorFactor * resolucionFactor).toFixed(2);
     }
 
@@ -46,13 +46,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const contenedorTabla = document.getElementById("tablaCostos");
 
     btnMostrar.addEventListener("click", function () {
-        // Verifica si ya hay una tabla existente
+        
         if (contenedorTabla.childElementCount === 0) {
             const tabla = generarTablaCostos();
             contenedorTabla.appendChild(tabla);
         }
 
-        // Alterna la clase 'oculto' para mostrar/ocultar la tabla
+       
         contenedorTabla.classList.toggle("oculto");
     });
 });

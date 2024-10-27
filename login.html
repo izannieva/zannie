@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PI - Pictures & Images</title>
+    <title>Registro - PI</title>
     <link rel="stylesheet" href="styles/styles.css" title="estilos por defecto">
     <link rel="alternate stylesheet" href="styles/modo_noche.css" title="Modo Noche">
     <link rel="alternate stylesheet" href="styles/alto_contraste.css" title="Alto contraste">
-    <link rel="alternate stylesheet" href="styles/mejorar_accesibilidad.css" title="Mejorar accesibilidad">
-    <link rel="alternate stylesheet" href="styles/modo_impresion.css" title="Modo impresión" media="print">
+    <link rel="alternate stylesheet" href="styles/mejorar_accesibilidad.css" title="Mejorar accesibilidad" media="print">
+    <link rel="alternate stylesheet" href="styles/modo_impresion.css" title="Modo impresión">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
@@ -25,22 +25,26 @@
 
     <section>
         <h2>Iniciar sesión</h2>
-        <form id="loginForm" action="index_registrado.html" method="get">
-            <label for="username">Usuario:</label>
-            <input type="text" id="username" name="username">
+        <form id="formulario_login" action="index_registrado.html" method="get">
+            <label for="login_usuario">Usuario:</label>
+            <input type="text" id="login_usuario" name="login_usuario">
             <span class="error-message" id="usernameError"></span>
             
-            <label for="password">Contraseña:</label>
-            <input type="password" id="password" name="password">
+            <label for="login_contraseña">Contraseña:</label>
+            <input type="password" id="login_contraseña" name="login_contraseña">
             <span class="error-message" id="passwordError"></span>
             
             <button type="submit">Entrar</button>
         </form>
     </section>
     
-    <section>
-        <h3><a href="registro.html">Regístrate con nosotros</a></h3>
+    
+    <section class="registro-boton">
+        <a href="registro.html" class="btn-registrarse">Regístrate con nosotros</a>
     </section>
+
+  
     <script src="validacion.js"></script>
 </body>
 </html>
+
