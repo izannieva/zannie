@@ -31,118 +31,86 @@
         <div class="columna tabla-precios">
             <h3>TABLA DE PRECIOS</h3>
             <table>
-                <tr>
-                    <th>Concepto</th>
-                    <th>Tarifa</th>
-                </tr>
-                <tr>
-                    <td>Coste procesamiento y envío</td>
-                    <td>10 €</td>
-                </tr>
-                <tr>
-                    <td>&lt; 5 páginas</td>
-                    <td>2 € por pág.</td>
-                </tr>
-                <tr>
-                    <td>entre 5 y 10 páginas</td>
-                    <td>1.8 € por pág.</td>
-                </tr>
-                <tr>
-                    <td>&gt; 10 páginas</td>
-                    <td>1.6 € por pág.</td>
-                </tr>
-                <tr>
-                    <td>Blanco y negro</td>
-                    <td>0 €</td>
-                </tr>
-                <tr>
-                    <td>Color</td>
-                    <td>0.5 € por foto</td>
-                </tr>
-                <tr>
-                    <td>Resolución &le; 300 dpi</td>
-                    <td>0 € por foto</td>
-                </tr>
-                <tr>
-                    <td>Resolución &gt; 300 dpi</td>
-                    <td>0.2 € por foto</td>
-                </tr>
+                <tr><th>Concepto</th><th>Tarifa</th></tr>
+                <tr><td>Coste procesamiento y envío</td><td>10 €</td></tr>
+                <tr><td>&lt; 5 páginas</td><td>2 € por pág.</td></tr>
+                <tr><td>entre 5 y 10 páginas</td><td>1.8 € por pág.</td></tr>
+                <tr><td>&gt; 10 páginas</td><td>1.6 € por pág.</td></tr>
+                <tr><td>Blanco y negro</td><td>0 €</td></tr>
+                <tr><td>Color</td><td>0.5 € por foto</td></tr>
+                <tr><td>Resolución &le; 300 dpi</td><td>0 € por foto</td></tr>
+                <tr><td>Resolución &gt; 300 dpi</td><td>0.2 € por foto</td></tr>
             </table>
+            <button id="btnMostrarTabla">Mostrar/ocultar tabla de costos</button>
+            <div id="tablaCostos" class="oculto"></div>
         </div>
 
         <div class="columna formulario">
             <h3>FORMULARIO</h3>
-            <form action="confirmacion_album.html" method="get">
+            <form id="albumForm" action="confirmacion_album.html" method="get">
                 <label for="nombre">Nombre completo:</label>
-                <input type="text" id="nombre" name="nombre" maxlength="200" required>
+                <input type="text" id="nombre" name="nombre">
+                <span class="error-message" id="nombreError"></span>
 
                 <label for="titulo">Título del álbum:</label>
-                <input type="text" id="titulo" name="titulo" maxlength="200" required>
-
-                <label for="texto">Texto adicional (dedicatoria):</label>
-                <textarea id="texto" name="texto" maxlength="4000"></textarea>
+                <input type="text" id="titulo" name="titulo">
+                <span class="error-message" id="tituloError"></span>
 
                 <label for="email">Correo electrónico:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="text" id="email" name="email">
+                <span class="error-message" id="emailError"></span>
 
                 <fieldset>
                     <legend>Dirección de envío</legend>
-
                     <label for="calle">Calle:</label>
-                    <input type="text" id="calle" name="calle" required>
+                    <input type="text" id="calle" name="calle">
+                    <span class="error-message" id="calleError"></span>
 
                     <label for="numero">Número:</label>
-                    <input type="number" id="numero" name="numero" required>
-
-                    <label for="piso">Piso:</label>
-                    <input type="text" id="piso" name="piso">
-
-                    <label for="puerta">Puerta:</label>
-                    <input type="text" id="puerta" name="puerta">
+                    <input type="text" id="numero" name="numero">
+                    <span class="error-message" id="numeroError"></span>
 
                     <label for="codigo_postal">Código postal:</label>
-                    <input type="number" id="codigo_postal" name="codigo_postal" required>
+                    <input type="text" id="codigo_postal" name="codigo_postal">
+                    <span class="error-message" id="codigo_postalError"></span>
 
                     <label for="localidad">Localidad:</label>
-                    <input type="text" id="localidad" name="localidad" required>
+                    <input type="text" id="localidad" name="localidad">
+                    <span class="error-message" id="localidadError"></span>
 
                     <label for="provincia">Provincia:</label>
-                    <input type="text" id="provincia" name="provincia" required>
+                    <input type="text" id="provincia" name="provincia">
+                    <span class="error-message" id="provinciaError"></span>
 
                     <label for="pais">País:</label>
-                    <input type="text" id="pais" name="pais" required>
+                    <input type="text" id="pais" name="pais">
+                    <span class="error-message" id="paisError"></span>
                 </fieldset>
 
-                <label for="telefono">Teléfono (opcional):</label>
-                <input type="tel" id="telefono" name="telefono">
-
-                <label for="color">Color de la portada:</label>
-                <input type="color" id="color" name="color" value="#000000">
-
                 <label for="copias">Número de copias:</label>
-                <input type="number" id="copias" name="copias" min="1" max="99" value="1" required>
+                <input type="text" id="copias" name="copias">
+                <span class="error-message" id="copiasError"></span>
 
                 <label for="resolucion">Resolución de las fotos (DPI):</label>
-                <input type="range" id="resolucion" name="resolucion" min="150" max="900" step="150" value="150">
+                <input type="text" id="resolucion" name="resolucion">
+                <span class="error-message" id="resolucionError"></span>
 
                 <label for="album">Álbum seleccionado:</label>
-                <select id="album" name="album" required>
+                <select id="album" name="album">
                     <option value="verano2024">Verano 2024</option>
                     <option value="cumpleaños2023">Cumpleaños 2023</option>
                     <option value="navidad2023">Navidad 2023</option>
                 </select>
-
-                <label for="fecha">Fecha de recepción (opcional):</label>
-                <input type="date" id="fecha" name="fecha">
+                <span class="error-message" id="albumError"></span>
 
                 <label for="impresion">Impresión:</label>
                 <select id="impresion" name="impresion">
                     <option value="color">Color</option>
                     <option value="blanco_negro">Blanco y negro</option>
                 </select>
+                <span class="error-message" id="impresionError"></span>
 
                 <p><strong>Precio estándar del álbum: 50,00 €</strong></p>
-
                 <button type="submit">Solicitar Álbum</button>
             </form>
         </div>
@@ -151,6 +119,9 @@
     <footer>
         <p>&copy; 2024 PI - Pictures & Images</p>
     </footer>
+
+    <!-- Enlace al archivo JavaScript para la validación y generación de la tabla de costos -->
+    <script src="validacionAlbum.js"></script>
+    <script src="tablacostos.js"></script>
 </body>
 </html>
-<!---->

@@ -7,9 +7,10 @@
     <link rel="stylesheet" href="styles/styles.css" title="estilos por defecto">
     <link rel="alternate stylesheet" href="styles/modo_noche.css" title="Modo Noche">
     <link rel="alternate stylesheet" href="styles/alto_contraste.css" title="Alto contraste">
-    <link rel="alternate stylesheet" href="styles/mejorar_accesibilidad.css" title="Mejorar accesibilidad" media = "print">
+    <link rel="alternate stylesheet" href="styles/mejorar_accesibilidad.css" title="Mejorar accesibilidad" media="print">
     <link rel="alternate stylesheet" href="styles/modo_impresion.css" title="Modo impresión">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="validacion.js"></script>
 </head>
 <body>
     <header>
@@ -23,45 +24,45 @@
         </nav>
     </header>
 
-    <form action="index_registrado.html" method="get" enctype="multipart/form-data">
+    <form id="registerForm" action="index_registrado.html" method="post" enctype="multipart/form-data">
         
-        <label for="username">Usuario:</label>
-        <input type="text" id="username" name="username" required>
+        <label for="regUsername">Usuario:</label>
+        <input type="text" id="regUsername" name="username">
+        <span class="error-message" id="usernameError"></span>
 
-        
-        <label for="password">Contraseña:</label>
-        <input type="password" id="password" name="password" required>
+        <label for="regPassword">Contraseña:</label>
+        <input type="password" id="regPassword" name="password">
+        <span class="error-message" id="passwordError"></span>
 
-       
-        <label for="confirm_password">Repetir contraseña:</label>
-        <input type="password" id="confirm_password" name="confirm_password" required>
+        <label for="repeatPassword">Repetir contraseña:</label>
+        <input type="password" id="repeatPassword" name="confirm_password">
+        <span class="error-message" id="repeatPasswordError"></span>
 
-        
         <label for="email">Correo electrónico:</label>
-        <input type="email" id="email" name="email" required>
+        <input type="text" id="email" name="email">
+        <span class="error-message" id="emailError"></span>
 
-      
         <label for="gender">Sexo:</label>
-        <select id="gender" name="gender" required>
+        <select id="gender" name="gender">
+            <option value="">Seleccione</option>
             <option value="masculino">Masculino</option>
             <option value="femenino">Femenino</option>
             <option value="otro">Otro</option>
         </select>
+        <span class="error-message" id="genderError"></span>
 
-        
         <label for="birthdate">Fecha de nacimiento:</label>
-        <input type="date" id="birthdate" name="birthdate" required>
+        <input type="text" id="birthdate" name="birthdate" placeholder="YYYY-MM-DD">
+        <span class="error-message" id="birthdateError"></span>
 
-        
         <label for="city">Ciudad:</label>
-        <input type="text" id="city" name="city" required>
+        <input type="text" id="city" name="city">
 
         <label for="country">País:</label>
-        <input type="text" id="country" name="country" required>
+        <input type="text" id="country" name="country">
 
-       
         <label for="photo">Subir foto:</label>
-        <input type="file" id="photo" name="photo" accept="image/*" required>
+        <input type="file" id="photo" name="photo" accept="image/*">
 
         <button type="submit">Registrarse</button>
     </form>
@@ -71,5 +72,6 @@
     </footer>
 </body>
 </html>
-<!---->
+
+
 

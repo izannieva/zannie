@@ -285,7 +285,21 @@ footer {
     }
 
     .columna {
-        margin-bottom: 20px;
         width: 100%; /* Asegura que la columna ocupe el 100% del ancho */
     }
+}
+
+.error {
+    border: 2px solid red; /* Resaltar campos con borde rojo */
+}
+
+.error-message {
+    color: red; /* Color del texto de mensaje de error */
+    font-size: 0.9em; /* Tamaño de fuente más pequeño para los mensajes */
+    margin-top: 0.2em; /* Espaciado entre el campo y el mensaje de error */
+}
+
+/* Clase para ocultar la tabla de costos */
+.oculto {
+    display: none; /* Oculta la tabla por defecto */
 }
