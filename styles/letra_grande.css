@@ -1,0 +1,10 @@
+/* Importa el estilo base */
+@import url("styles.css");
+
+/* Redefine solo las variables de tamaño de letra */
+:root {
+    --font-size-small: 1.125em;      /* Equivale aproximadamente a 18px */
+    --font-size-medium: 1.375em;     /* Equivale aproximadamente a 22px */
+    --font-size-large: 1.625em;      /* Equivale aproximadamente a 26px */
+    --font-size-xlarge: 1.875em;     /* Equivale aproximadamente a 30px */
+}
