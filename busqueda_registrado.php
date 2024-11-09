@@ -16,19 +16,19 @@
 </head>
 <body>
     <header>
-        <h1><a href="index_registrado.html">PI - Pictures & Images</a></h1>
+        <h1><a href="index_registrado.php">PI - Pictures & Images</a></h1>
         <nav>
             <ul>
-                <li><a href="index_registrado.html">Inicio</a></li>
-                <li><a href="busqueda_registrado.html">Buscar fotos</a></li>
-                <li><a href="mi_perfil.html">Mi Perfil</a></li>
-                <li><a href="solicitar_album.html">Solicitar album</a></li>
-                <li><a href="index.html">Cerrar Sesión</a></li>
+                <li><a href="index_registrado.php">Inicio</a></li>
+                <li><a href="busqueda_registrado.php">Buscar fotos</a></li>
+                <li><a href="mi_perfil.php">Mi Perfil</a></li>
+                <li><a href="solicitar_album.php">Solicitar album</a></li>
+                <li><a href="index.php">Cerrar Sesión</a></li>
             </ul>
         </nav>
     </header>
 
-    <form action="resultados_registrado.html" method="get">
+    <form action="resultados_registrado.php" method="get">
         <label for="title">Título:</label>
         <input type="text" id="title" name="title">
 

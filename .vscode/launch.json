@@ -5,18 +5,18 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Launch index.html",
+            "name": "Launch index.php",
             "type": "firefox",
             "request": "launch",
             "reAttach": true,
-            "file": "${workspaceFolder}/index.html"
+            "file": "${workspaceFolder}/index.php"
         },
         {
             "name": "Launch localhost",
             "type": "firefox",
             "request": "launch",
             "reAttach": true,
-            "url": "http://localhost/index.html",
+            "url": "http://localhost/index.php",
             "webRoot": "${workspaceFolder}"
         },
         {

@@ -14,19 +14,19 @@
 </head>
 <body>
     <header>
-        <h1><a href="index_registrado.html">PI - Pictures & Images</a></h1>
+        <h1><a href="index_registrado.php">PI - Pictures & Images</a></h1>
         <nav>
             <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="busqueda.html">Buscar fotos</a></li>
-                <li><a href="registro.html">Registro</a></li>
+                <li><a href="index.php">Inicio</a></li>
+                <li><a href="busqueda.php">Buscar fotos</a></li>
+                <li><a href="registro.php">Registro</a></li>
             </ul>
         </nav>
     </header>
 
     <section>
         <h2>Iniciar sesión</h2>
-        <form id="formulario_login" action="index_registrado.html" method="get">
+        <form id="formulario_login" action="index_registrado.php" method="get">
             <label for="login_usuario">Usuario:</label>
             <input type="text" id="login_usuario" name="login_usuario">
             <span class="error-message" id="usernameError"></span>
@@ -41,7 +41,7 @@
     
     
     <section class="registro-boton">
-        <a href="registro.html" class="btn-registrarse">Regístrate con nosotros</a>
+        <a href="registro.php" class="btn-registrarse">Regístrate con nosotros</a>
     </section>
 
   

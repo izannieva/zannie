@@ -14,17 +14,17 @@
 </head>
 <body>
     <header>
-        <h1><a href="index.html">PI - Pictures & Images</a></h1>
+        <h1><a href="index.php">PI - Pictures & Images</a></h1>
         <nav>
             <ul>
-                <li><a href="busqueda.html">Buscar fotos</a></li>
-                <li><a href="login.html">Iniciar Sesión</a></li>
-                <li><a href="registro.html">Registro</a></li>
+                <li><a href="busqueda.php">Buscar fotos</a></li>
+                <li><a href="login.php">Iniciar Sesión</a></li>
+                <li><a href="registro.php">Registro</a></li>
             </ul>
         </nav>
     </header>
 
-    <form id="formulario_registro" action="index_registrado.html" method="get" enctype="multipart/form-data">
+    <form id="formulario_registro" action="index_registrado.php" method="get" enctype="multipart/form-data">
         
         <label for="registro_usuario">Nombre de usuario:</label>
         <input type="text" id="registro_usuario" name="username">

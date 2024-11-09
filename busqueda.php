@@ -14,17 +14,17 @@
 </head>
 <body>
     <header>
-        <h1><a href="index_registrado.html">PI - Pictures & Images</a></h1>
+        <h1><a href="index_registrado.php">PI - Pictures & Images</a></h1>
         <nav>
             <ul>
-                <li><a href="busqueda.html">Buscar fotos</a></li>
-                <li><a href="login.html">Iniciar Sesión</a></li>
-                <li><a href="registro.html">Registro</a></li>
+                <li><a href="busqueda.php">Buscar fotos</a></li>
+                <li><a href="login.php">Iniciar Sesión</a></li>
+                <li><a href="registro.php">Registro</a></li>
             </ul>
         </nav>
     </header>
 
-    <form action="resultados.html" method="get">
+    <form action="resultados.php" method="get">
         <label for="title">Título:</label>
         <input type="text" id="title" name="title">
 
