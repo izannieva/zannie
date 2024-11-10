@@ -1,10 +1,6 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Declaración de Accesibilidad</title>
-</head>
+<?php
+    include '../views/header.php'; 
+?>
 <body>
     <h1>Declaración de Accesibilidad</h1>
 
@@ -37,3 +33,7 @@
     </footer>
 </body>
 </html>
+<?php
+    include '../views/footer.php'; 
+    ?>
+     <!---->

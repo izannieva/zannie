@@ -1,61 +1,70 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Confirmación de Solicitud de Álbum</title>
-    <link rel="stylesheet" href="styles/styles.css" title = "estilos por defecto">
-    <link rel="alternate stylesheet" href="styles/modo_noche.css" title="Modo Noche">
-    <link rel="alternate stylesheet" href="styles/alto_contraste.css" title="Alto contraste">
-    <link rel="alternate stylesheet" href="styles/mejorar_accesibilidad.css" title="mejorar accesibilidad">
-    <link rel="alternate stylesheet" href="styles/modo_impresion.css" title="Modo impresion" media = "print">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-</head>
+<?php
+include '../views/header.php';
+
+if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+    $nombre = $_GET['nombre'];
+    $titulo = $_GET['titulo'];
+    $copias = (int)$_GET['copias'];
+    $paginas = (int)$_GET['paginas'];
+    $resolucion = (int)$_GET['resolucion'];
+    $impresion = $_GET['impresion'];
+
+    
+    $tabla_precios = [
+        [1, 3, 12.0, 12.6, 13.5, 14.1],
+        [2, 6, 14.0, 15.2, 17.0, 18.2],
+        [3, 9, 16.0, 17.8, 20.5, 22.3],
+        [4, 12, 18.0, 20.4, 24.0, 26.4],
+        [5, 15, 19.8, 22.8, 27.3, 30.3],
+        [6, 18, 21.6, 25.2, 30.6, 34.2],
+        [7, 21, 23.4, 27.6, 33.9, 38.1],
+        [8, 24, 25.2, 30.0, 37.2, 42.0],
+        [9, 27, 27.0, 32.4, 40.5, 46.0],
+        [10, 30, 28.8, 34.8, 43.8, 49.9],
+        [11, 33, 30.4, 37.0, 46.9, 53.0],
+        [12, 36, 32.0, 39.2, 50.6, 57.2],
+        [13, 39, 33.6, 41.4, 53.1, 61.6],
+        [14, 42, 35.2, 43.6, 56.2, 64.8],
+        [15, 45, 36.8, 45.8, 59.3, 68.3]
+    ];
+
+ 
+    function calcularCosto($paginas, $resolucion, $impresion) {
+        global $tabla_precios;
+
+        if ($impresion === 'blanco_negro') {
+            $columna = ($resolucion <= 300) ? 2 : 3;
+        } else {
+            $columna = ($resolucion <= 300) ? 4 : 5;
+        }
+
+        return $tabla_precios[$paginas - 1][$columna];
+    }
+
+  
+    $costo_unitario = calcularCosto($paginas, $resolucion, $impresion);
+    $costo_envio = 10;
+    $costo_total = ($costo_unitario + $costo_envio) * $copias;
+}
+?>
+
 <body>
-    <header>
-        <h1><a href="home_registrado.php">PI - Pictures & Images</a></h1>
-        <nav>
-            <ul>
-                <li><a href="home_registrado.php">Inicio</a></li>
-                <li><a href="busqueda_registrado.php">Buscar fotos</a></li>
-                <li><a href="mi_perfil.php">Mi Perfil</a></li>
-                <li><a href="solicitar_album.php">Solicitar album</a></li>
-                <link rel="alternate stylesheet" href="styles/letra_grande.css" title="Letra grande">
-                <li><a href="home.php">Cerrar Sesión</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+    <h1>¡Solicitud de Álbum Registrada!</h1>
+</header>
 
-    <h2>¡Solicitud de Álbum Registrada!</h2>
-    
-    <p>Estimado/a usuario,</p>
-    
-    <p>Tu solicitud del álbum ha sido registrada exitosamente. A continuación, te mostramos un resumen de los datos proporcionados:</p>
+<table>
+    <tr><td>Nombre:</td><td><?php echo htmlspecialchars($nombre); ?></td></tr>
+    <tr><td>Título del álbum:</td><td><?php echo htmlspecialchars($titulo); ?></td></tr>
+    <tr><td>Copias:</td><td><?php echo $copias; ?></td></tr>
+    <tr><td>Número de páginas:</td><td><?php echo $paginas; ?></td></tr>
+    <tr><td>Resolución:</td><td><?php echo $resolucion; ?> dpi</td></tr>
+    <tr><td>Impresión:</td><td><?php echo $impresion; ?></td></tr>
+    <tr><td><strong>Costo total:</strong></td><td><?php echo number_format($costo_total, 2); ?> €</td></tr>
+</table>
 
-    <ul>
-        <li><strong>Nombre completo:</strong> Francisco Palotes</li>
-        <li><strong>Título del álbum:</strong> Vacaciones en la playa</li>
-        <li><strong>Texto adicional (dedicatoria):</strong> Para siempre en nuestros corazones</li>
-        <li><strong>Correo electrónico:</strong> Elpalos@example.com</li>
-        <li><strong>Dirección de envío:</strong> Avenida Denia, Ciudad Alicante </li>
-        <li><strong>Teléfono:</strong> 123456789</li>
-        <li><strong>Color de la portada:</strong> #FF5733</li>
-        <li><strong>Número de copias:</strong> 2</li>
-        <li><strong>Resolución de las fotos (DPI):</strong> 300</li>
-        <li><strong>Álbum seleccionado:</strong> Verano 2024</li>
-        <li><strong>Fecha de recepción:</strong> 2024-10-10</li>
-        <li><strong>Impresión:</strong> Color</li>
-    </ul>
+<p>Nos pondremos en contacto contigo para confirmar tu pedido.</p>
 
-    <p>El coste total de tu álbum es: <strong>50,00 €</strong>.</p>
-
-    <p>Nos pondremos en contacto contigo a través de tu correo electrónico para cualquier actualización o consulta sobre tu pedido.</p>
-
-    <p>Gracias por confiar en PI - Pictures & Images. Si tienes alguna duda, no dudes en contactarnos.</p>
-
-    <footer>
-        <p>&copy; 2024 PI - Pictures & Images</p>
-    </footer>
+<?php include '../views/footer.php'; ?>
 </body>
 </html>
-<!---->
