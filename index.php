@@ -8,4 +8,5 @@ error_reporting(E_ALL);
 //session_start();
 
 // Incluye el enrutador
+echo "Pasando por index.php";
 require_once 'router.php';
