@@ -26,7 +26,7 @@
 
     <section>
         <h2>Iniciar sesión</h2>
-        <form id="formulario_login" action="home_registrado.php" method="get">
+        <form id="formulario_login" action="/daw/login" method="post">
             <label for="login_usuario">Usuario:</label>
             <input type="text" id="login_usuario" name="login_usuario">
             <span class="error-message" id="usernameError"></span>

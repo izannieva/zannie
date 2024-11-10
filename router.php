@@ -8,6 +8,7 @@ $request = $_SERVER['REQUEST_URI'];
 $request = strtok($request, '?'); // Elimina cualquier parámetro en la URL
 
 var_dump($request);
+echo "pasando por el router de los cojones";
 
 switch ($request) {
     case '/daw/':
@@ -22,13 +23,8 @@ switch ($request) {
         include 'views/home.php';
         break;
 
-    case '/':
-        include 'views/home.php';
-        break;
-
-    case '/home':
-        $page_title = "Inicio - Mi Proyecto";
-        include 'views/home.php';
+    case '/daw/login':
+        include 'views/login.php';
         break;
 
     default:

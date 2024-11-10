@@ -28,7 +28,7 @@
 
     <section>
         <h2>Iniciar sesión</h2>
-        <form action="home_registrado.php" method="get">
+        <form action="/daw/login" method="post">
             <label for="username">Usuario:</label>
             <input type="text" id="username" name="username" required>
             <label for="password">Contraseña:</label>
