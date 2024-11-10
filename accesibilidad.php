@@ -33,7 +33,7 @@
 
     </ul>
     <footer>
-        <p><a href="index.php">volver</a></li></p>
+        <p><a href="home.php">volver</a></li></p>
     </footer>
 </body>
 </html>

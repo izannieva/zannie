@@ -16,7 +16,7 @@
 </head>
 <body>
     <header>
-        <h1><a href="index.php">PI - Pictures & Images</a></h1>
+        <h1><a href="home.php">PI - Pictures & Images</a></h1>
         <nav>
             <ul>
                 <li><a href="busqueda.php">Buscar fotos</a></li>
@@ -28,7 +28,7 @@
 
     <section>
         <h2>Iniciar sesión</h2>
-        <form action="index_registrado.php" method="get">
+        <form action="home_registrado.php" method="get">
             <label for="username">Usuario:</label>
             <input type="text" id="username" name="username" required>
             <label for="password">Contraseña:</label>

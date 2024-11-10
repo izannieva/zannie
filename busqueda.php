@@ -14,7 +14,7 @@
 </head>
 <body>
     <header>
-        <h1><a href="index_registrado.php">PI - Pictures & Images</a></h1>
+        <h1><a href="home_registrado.php">PI - Pictures & Images</a></h1>
         <nav>
             <ul>
                 <li><a href="busqueda.php">Buscar fotos</a></li>

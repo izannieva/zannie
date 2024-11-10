@@ -14,10 +14,10 @@
 </head>
 <body>
     <header>
-        <h1><a href="index_registrado.php">PI - Pictures & Images</a></h1>
+        <h1><a href="home_registrado.php">PI - Pictures & Images</a></h1>
         <nav>
             <ul>
-                <li><a href="index.php">Inicio</a></li>
+                <li><a href="home.php">Inicio</a></li>
                 <li><a href="busqueda.php">Buscar fotos</a></li>
                 <li><a href="registro.php">Registro</a></li>
             </ul>
@@ -26,7 +26,7 @@
 
     <section>
         <h2>Iniciar sesión</h2>
-        <form id="formulario_login" action="index_registrado.php" method="get">
+        <form id="formulario_login" action="home_registrado.php" method="get">
             <label for="login_usuario">Usuario:</label>
             <input type="text" id="login_usuario" name="login_usuario">
             <span class="error-message" id="usernameError"></span>
