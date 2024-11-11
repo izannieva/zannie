@@ -18,7 +18,7 @@ include '../views/header.php';
 
 <h2>Solicitar Álbum Impreso</h2>
 
-<!-- Mostrar la tabla de precios -->
+
 <div class="contenedor-columnas">
     <div class="columna tabla-precios">
         <h3>Tabla de Precios</h3>

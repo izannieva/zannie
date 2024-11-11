@@ -1,12 +1,22 @@
 <?php
+session_start();
 include '../views/header.php';
-$username = isset($_GET['username']) ? htmlspecialchars($_GET['username']) : '';
 
 
+$username = isset($_SESSION['username']) ? htmlspecialchars($_SESSION['username']) : '';
+
+
+if (empty($username)) {
+    header("Location: registro.php");
+    exit;
+}
+
+
+unset($_SESSION['username']);
 ?>
 <body>
     <header>
-        <h1><a href="home.php">PI - Pictures & Images</a></h1>
+        <h1><a href="home_registrado.php">PI - Pictures & Images</a></h1>
     </header>
 
     <h2>¡Registro Exitoso!</h2>

@@ -3,7 +3,7 @@
 $usuarios_permitidos = [
     'ADMIN' => '1234',
     'izan' => '12345',
-    'usuario3' => 'password3',
+    'Lamine' => 'Yamal',
     'usuario4' => 'password4'
 ];
 
