@@ -1,131 +1,98 @@
+
 @import url('styles.css');
+
+
+:root {
+    --color-fondo: #121212;
+    --color-texto: #e0e0e0;
+    --color-secundario: #1e1e1e;
+    --color-borde: #333;
+    --color-hover: #3700b3;
+    --color-boton: #6200ee;
+    --color-boton-hover: #3700b3;
+    --color-acento: #bb86fc;
+}
+
 body {
-    background-color: #121212;
-    color: #e0e0e0;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
 }
 
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
-}
-
-header h1 a {
-    color: #fff;
-    text-decoration: none;
+    background-color: var(--color-secundario);
+    color: var(--color-texto);
 }
 
 nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    background: #444;
-    margin: 0;
-}
-
-nav ul li {
-    margin: 0 15px;
+    background-color: var(--color-secundario);
 }
 
 nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 10px;
+    color: var(--color-texto);
 }
 
 nav ul li a:hover {
-    background: #555;
-    transition: background-color 0.3s;
+    background-color: var(--color-hover);
 }
 
+
 form {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 30px;
-    background: #1e1e1e;
-    color: #e0e0e0;
+    background-color: var(--color-secundario);
+    border: 1px solid var(--color-borde);
+    padding: 20px;
     border-radius: 15px;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 form label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    text-align: center;
+    color: var(--color-texto);
 }
 
 form input[type="text"],
 form input[type="date"],
 form input[type="password"],
-form input[type="email"],
-form input[type="number"],
-form input[type="tel"],
-form input[type="color"],
-form select,
-form textarea {
+form select {
     width: 100%;
-    box-sizing: border-box;
     padding: 10px;
-    margin-bottom: 10px;
-    background: #333;
-    color: #e0e0e0;
-    border: 1px solid #555;
-    border-radius: 5px;
+    margin-bottom: 15px;
+    background-color: var(--color-borde);
+    color: var(--color-texto);
+    border: 1px solid var(--color-hover);
+    border-radius: 8px;
 }
 
 form button {
-    width: 100%;
-    padding: 10px;
-    background: #444;
-    color: #fff;
+    background-color: var(--color-boton);
+    color: var(--color-texto);
+    padding: 12px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 form button:hover {
-    background: #555;
+    background-color: var(--color-boton-hover);
+    transform: translateY(-3px);
 }
 
-#mi_perfil {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 30px;
-    background: #1e1e1e;
-    border-radius: 15px;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
-}
-
-h2 {
-    text-align: center;
-    color: #e0e0e0;
-}
 
 .cards-container {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: space-around;
-    margin: 20px;
 }
 
 .card {
-    background: #1e1e1e;
+    background-color: var(--color-secundario);
+    border: 1px solid var(--color-borde);
     border-radius: 15px;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
-    flex: 1 1 calc(33% - 40px);
-    max-width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     padding: 20px;
+    margin: 10px;
+    color: var(--color-texto);
     transition: transform 0.3s, box-shadow 0.3s;
-    box-sizing: border-box;
-    color: #e0e0e0;
 }
 
 .card img {
@@ -135,87 +102,49 @@ h2 {
 }
 
 .card:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7);
 }
 
-h3 {
-    margin: 0;
-    font-size: 1.2em;
-    color: #e0e0e0;
-    text-align: center;
+.card h3 {
+    color: var(--color-acento);
 }
 
 .card p {
-    font-size: 0.9em;
     color: #b0b0b0;
 }
 
-.icon {
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 900;
-    margin-right: 5px;
-}
-
-nav ul li a::before {
-    content: '\f007';
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 900;
-    margin-right: 8px;
-}
 
 table {
     width: 100%;
     border-collapse: collapse;
+    background-color: var(--color-secundario);
     margin: 20px 0;
-    background: #1e1e1e;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-    color: #e0e0e0;
+    color: var(--color-texto);
+    border: 1px solid var(--color-borde);
 }
 
-table th, table td {
-    border: 1px solid #555;
+table th {
+    background-color: var(--color-borde);
+    color: var(--color-texto);
+}
+
+table td {
+    border: 1px solid var(--color-hover);
     padding: 10px;
     text-align: center;
 }
 
-table th {
-    background: #333;
-    color: #fff;
-}
-
-.content-container {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background: #1e1e1e;
-    color: #e0e0e0;
-    border-radius: 15px;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
-}
 
 footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
+    background-color: var(--color-secundario);
+    color: var(--color-texto);
+    padding: 20px;
     text-align: center;
-    margin-top: 20px;
 }
 
-@media screen and (max-width: 1024px) {
-    .card {
-        flex: 1 1 calc(50% - 40px);
+@media screen and (max-width: 768px) {
+    .cards-container {
+        flex-direction: column;
     }
 }
-
-@media screen and (max-width: 600px) {
-    .card {
-        flex: 1 1 100%;
-    }
-
-    form, .content-container, #mi_perfil {
-        width: 90%;
-    }
-}
-
-/* */ 

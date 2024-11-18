@@ -1,17 +1,6 @@
 
 <?php include '../views/header.php'; ?>
 
-<body>
-    <header>
-        <h1><a href="home.php">PI - Pictures & Images</a></h1>
-        <nav>
-            <ul>
-                <li><a href="busqueda.php">Buscar fotos</a></li>
-                <li><a href="login.php">Iniciar Sesión</a></li>
-                <li><a href="registro.php">Registro</a></li>
-            </ul>
-        </nav>
-    </header>
 
     <form id="formulario_registro" action="procesar_registro.php" method="post" enctype="multipart/form-data">
         <label for="registro_usuario">Nombre de usuario:</label>

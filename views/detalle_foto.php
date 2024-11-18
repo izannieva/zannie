@@ -1,9 +1,23 @@
 <?php
-include '../views/header.php'; ?>
+include '../views/header.php'; 
 
-<?php
+
+session_start();
+
+
+if (!isset($_SESSION['usuario']) && !isset($_COOKIE['usuario'])) {
+    
+    header('Location: login.php');
+    exit();
+}
+
+
+if (isset($_COOKIE['usuario']) && !isset($_SESSION['usuario'])) {
+    $_SESSION['usuario'] = $_COOKIE['usuario'];
+}
+
+
 $id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
-
 
 $fotos = [
     1 => [
@@ -32,7 +46,6 @@ $fotos = [
     ]
 ];
 
-
 if ($id === 4) {
     $foto = [
         'titulo' => isset($_GET['title']) ? $_GET['title'] : 'Título no disponible',
@@ -43,7 +56,6 @@ if ($id === 4) {
         'imagen' => 'img/default.jpg'
     ];
 } else {
-
     $foto = isset($fotos[$id]) ? $fotos[$id] : null;
 }
 ?>
@@ -75,4 +87,3 @@ if ($id === 4) {
     <?php include '../views/footer.php'; ?>
 </body>
 </html>
- <!---->

@@ -1,17 +1,6 @@
 <?php
     include '../views/header.php'; 
 ?>
-<body>
-    <header>
-        <h1><a href="home_registrado.php">PI - Pictures & Images</a></h1>
-        <nav>
-            <ul>
-                <li><a href="busqueda.php">Buscar fotos</a></li>
-                <li><a href="login.php">Iniciar Sesión</a></li>
-                <li><a href="registro.php">Registro</a></li>
-            </ul>
-        </nav>
-    </header>
 
     <section>
         <h2>Resultados de la busqueda</h2>
@@ -61,4 +50,4 @@
     <?php
     include '../views/footer.php'; 
     ?>
-     <!---->
+     <!--arreglar el problema del formulario que no es el mismo -->

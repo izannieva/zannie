@@ -1,10 +1,10 @@
 <?php
 include '../views/header.php';
 
-// Obtener el ID de la foto desde la URL
+
 $id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
 
-// Datos ficticios para cada foto
+
 $fotos = [
     1 => [
         'titulo' => 'Foto 1',
@@ -38,7 +38,7 @@ $fotos = [
     ]
 ];
 
-// Verificar si el ID es válido
+
 $foto = isset($fotos[$id]) ? $fotos[$id] : null;
 ?>
 

@@ -36,4 +36,4 @@
 <?php
     include '../views/footer.php'; 
     ?>
-     <!---->
+     <!-- cambiar que al cerrar el navegador se logee automaticamkente si existen las cookies usuario y password ( si le ha dado a recordarse) cambiar que salga la ultima visita NO LA ACTUAL -->

@@ -1,23 +1,22 @@
 <?php 
 include '../views/header.php';
+session_start();
+
+
+$estilo = isset($_SESSION['estilo']) ? $_SESSION['estilo'] : (isset($_COOKIE['estilo']) ? $_COOKIE['estilo'] : 'styles.css');
 ?>
-
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitar Álbum Impreso</title>
+    <link rel="stylesheet" href="../styles/<?php echo htmlspecialchars($estilo); ?>">
+</head>
 <body>
-<header>
-    <h1><a href="home_registrado.php">PI - Pictures & Images</a></h1>
-    <nav>
-        <ul>
-            <li><a href="home_registrado.php">Inicio</a></li>
-            <li><a href="busqueda_registrado.php">Buscar fotos</a></li>
-            <li><a href="mi_perfil.php">Mi Perfil</a></li>
-            <li><a href="solicitar_album.php">Solicitar álbum</a></li>
-            <li><a href="home.php">Cerrar Sesión</a></li>
-        </ul>
-    </nav>
-</header>
-
 <h2>Solicitar Álbum Impreso</h2>
 
+<p>Elige la opción de tapa de tu álbum impreso. Si eliges tapa dura, tendrá un costo adicional.</p>
 
 <div class="contenedor-columnas">
     <div class="columna tabla-precios">
@@ -64,22 +63,22 @@ include '../views/header.php';
 
 <div class="columna formulario">
     <h3>Formulario para Solicitar Álbum</h3>
-   
     <form id="albumForm" action="confirmacion_album.php" method="get">
+        
         <label for="nombre">Nombre completo:</label>
-        <input type="text" id="nombre" name="nombre" required>
+        <input type="text" id="nombre" name="nombre" required maxlength="200">
 
         <label for="titulo">Título del álbum:</label>
-        <input type="text" id="titulo" name="titulo" required>
+        <input type="text" id="titulo" name="titulo" required maxlength="200">
 
         <label for="copias">Número de copias:</label>
-        <input type="number" id="copias" name="copias" min="1" required>
+        <input type="number" id="copias" name="copias" min="1" max="99" value="1" required>
 
         <label for="paginas">Número de páginas (1-15):</label>
         <input type="number" id="paginas" name="paginas" min="1" max="15" required>
 
         <label for="resolucion">Resolución de las fotos (DPI):</label>
-        <input type="number" id="resolucion" name="resolucion" min="150" max="900" required>
+        <input type="number" id="resolucion" name="resolucion" min="150" max="900" value="150" required>
 
         <label for="impresion">Impresión:</label>
         <select id="impresion" name="impresion">
@@ -87,10 +86,61 @@ include '../views/header.php';
             <option value="blanco_negro">Blanco y negro</option>
         </select>
 
+        <label for="tapa">Tipo de tapa:</label>
+        <select id="tapa" name="tapa">
+            <option value="blanda">Blanda</option>
+            <option value="dura">Dura</option>
+        </select>
+
+      
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required maxlength="200">
+
+        
+        <label for="calle">Calle:</label>
+        <input type="text" id="calle" name="calle" required>
+
+        <label for="numero">Número:</label>
+        <input type="text" id="numero" name="numero" required>
+
+        <label for="piso">Piso:</label>
+        <input type="text" id="piso" name="piso">
+
+        <label for="codigo_postal">Código Postal:</label>
+        <input type="text" id="codigo_postal" name="codigo_postal" required>
+
+        <label for="localidad">Localidad:</label>
+        <input type="text" id="localidad" name="localidad" required>
+
+        <label for="provincia">Provincia:</label>
+        <input type="text" id="provincia" name="provincia" required>
+
+        <label for="pais">País:</label>
+        <input type="text" id="pais" name="pais" required>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" maxlength="15">
+
+        <label for="color_portada">Color de la portada:</label>
+        <input type="color" id="color_portada" name="color_portada" value="#000000">
+
+        <label for="album">Álbum de fotos:</label>
+        <select id="album" name="album" required>
+            <option value="album1">Álbum 1</option>
+            <option value="album2">Álbum 2</option>
+           
+        </select>
+
+        <label for="fecha">Fecha de recepción:</label>
+        <input type="date" id="fecha" name="fecha">
+
         <button type="submit">Solicitar Álbum</button>
     </form>
 </div>
 
+
+
 <?php include '../views/footer.php'; ?>
 </body>
 </html>
+

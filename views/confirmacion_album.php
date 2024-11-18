@@ -8,8 +8,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     $paginas = (int)$_GET['paginas'];
     $resolucion = (int)$_GET['resolucion'];
     $impresion = $_GET['impresion'];
+    $tapa = $_GET['tapa'];
+    $email = $_GET['email'];
+    $calle = $_GET['calle'];
+    $numero = $_GET['numero'];
+    $piso = $_GET['piso'];
+    $codigo_postal = $_GET['codigo_postal'];
+    $localidad = $_GET['localidad'];
+    $provincia = $_GET['provincia'];
+    $pais = $_GET['pais'];
+    $telefono = $_GET['telefono'];
+    $color_portada = $_GET['color_portada'];
+    $album = $_GET['album'];
+    $fecha = $_GET['fecha'];
 
-    
+   
     $tabla_precios = [
         [1, 3, 12.0, 12.6, 13.5, 14.1],
         [2, 6, 14.0, 15.2, 17.0, 18.2],
@@ -28,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         [15, 45, 36.8, 45.8, 59.3, 68.3]
     ];
 
- 
+   
     function calcularCosto($paginas, $resolucion, $impresion) {
         global $tabla_precios;
 
@@ -41,7 +54,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         return $tabla_precios[$paginas - 1][$columna];
     }
 
-  
     $costo_unitario = calcularCosto($paginas, $resolucion, $impresion);
     $costo_envio = 10;
     $costo_total = ($costo_unitario + $costo_envio) * $copias;
@@ -60,6 +72,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     <tr><td>Número de páginas:</td><td><?php echo $paginas; ?></td></tr>
     <tr><td>Resolución:</td><td><?php echo $resolucion; ?> dpi</td></tr>
     <tr><td>Impresión:</td><td><?php echo $impresion; ?></td></tr>
+    <tr><td>Tapa:</td><td><?php echo ucfirst($tapa); ?></td></tr>
+    <tr><td>Color de portada:</td><td><?php echo htmlspecialchars($color_portada); ?></td></tr>
+    <tr><td>Álbum:</td><td><?php echo htmlspecialchars($album); ?></td></tr>
+    <tr><td>Fecha de recepción:</td><td><?php echo htmlspecialchars($fecha); ?></td></tr>
+    <tr><td>Correo electrónico:</td><td><?php echo htmlspecialchars($email); ?></td></tr>
+    <tr><td>Dirección:</td><td><?php echo htmlspecialchars($calle . ', ' . $numero . ' ' . $piso . ', ' . $codigo_postal . ', ' . $localidad . ', ' . $provincia . ', ' . $pais); ?></td></tr>
+    <tr><td>Teléfono:</td><td><?php echo htmlspecialchars($telefono); ?></td></tr>
     <tr><td><strong>Costo total:</strong></td><td><?php echo number_format($costo_total, 2); ?> €</td></tr>
 </table>
 

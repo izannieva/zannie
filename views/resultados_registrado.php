@@ -1,19 +1,6 @@
 <?php
 include '../views/header.php'; 
 ?>
-<body>
-    <header>
-        <h1><a href="home_registrado.php">PI - Pictures & Images</a></h1>
-        <nav>
-            <ul>
-                <li><a href="busqueda_registrado.php">Buscar fotos</a></li>
-                <li><a href="mi_perfil.php">Mi Perfil</a></li>
-                <li><a href="solicitar_album.php">Solicitar álbum</a></li>
-                <li><a href="home.php">Cerrar Sesión</a></li>
-            </ul>
-        </nav>
-    </header>
-
     <h2>Resultados de la Búsqueda</h2>
 
     
